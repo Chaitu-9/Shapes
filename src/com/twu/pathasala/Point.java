@@ -12,6 +12,9 @@ public class Point {
     }
 
     public double slope(Point otherPoint) {
+        if (coordinateX == otherPoint.coordinateX)
+            return Double.POSITIVE_INFINITY;
+        else
         return 0;
     }
 }

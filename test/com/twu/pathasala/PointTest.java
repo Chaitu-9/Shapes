@@ -73,4 +73,15 @@ public class PointTest {
 
         assertThat(actualSlope, is(expectedSlope));
     }
+
+    @Test
+    public void shouldCalculateSlopeOfLineParalleltoYAxis() {
+        Point firstPoint = new Point(5, 2);
+        Point secondPoint = new Point(5, 0);
+
+        double actualSlope = firstPoint.slope(secondPoint);
+        double expectedSlope = Double.POSITIVE_INFINITY;
+
+        assertThat(actualSlope, is(expectedSlope));
+    }
 }
