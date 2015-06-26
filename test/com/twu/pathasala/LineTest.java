@@ -29,4 +29,16 @@ public class LineTest {
 
         assertThat(actualSlope, is(expectedSlope));
     }
+
+    @Test
+    public void shouldCalculateSlopeOfLineNotParalleltoAnyAxis() {
+        Point firstPoint = new Point(3, 2);
+        Point secondPoint = new Point(1, 0);
+        Line line = new Line(firstPoint, secondPoint);
+
+        double actualSlope = line.slope();
+        double expectedSlope = 1;
+
+        assertThat(actualSlope, is(expectedSlope));
+    }
 }

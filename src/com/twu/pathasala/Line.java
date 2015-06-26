@@ -11,7 +11,9 @@ public class Line {
     public double slope() {
         if(firstPoint.coordinateY == secondPoint.coordinateY)
         return 0;
-        else
+        else if (firstPoint.coordinateX == secondPoint.coordinateX)
             return Double.POSITIVE_INFINITY;
+        else
+            return (firstPoint.coordinateY -secondPoint.coordinateY)/(firstPoint.coordinateX- secondPoint.coordinateX);
     }
 }
