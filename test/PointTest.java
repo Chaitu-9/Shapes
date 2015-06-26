@@ -49,4 +49,15 @@ public class PointTest {
 
         assertThat(actualDistance, is(expectedDistance));
     }
+
+    @Test
+    public void shouldCalculateDistanceBetweenTwoPointsWhenAllCoordinatesAreDifferent(){
+        Point firstPoint = new Point(3,4);
+        Point secondPoint = new Point(6,8);
+
+        double actualDistance = firstPoint.distanceFrom(secondPoint);
+        double expectedDistance =5;
+
+        assertThat(actualDistance, is(expectedDistance));
+    }
 }
