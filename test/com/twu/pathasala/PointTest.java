@@ -84,4 +84,15 @@ public class PointTest {
 
         assertThat(actualSlope, is(expectedSlope));
     }
+
+    @Test
+    public void shouldCalculateSlopeOfLineNotParalleltoAnyAxis() {
+        Point firstPoint = new Point(3, 2);
+        Point secondPoint = new Point(1, 0);
+
+        double actualSlope = firstPoint.slope(secondPoint);
+        double expectedSlope = 1;
+
+        assertThat(actualSlope, is(expectedSlope));
+    }
 }

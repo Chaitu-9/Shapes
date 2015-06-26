@@ -15,6 +15,6 @@ public class Point {
         if (coordinateX == otherPoint.coordinateX)
             return Double.POSITIVE_INFINITY;
         else
-        return 0;
+            return (coordinateY -otherPoint.coordinateY)/(coordinateX- otherPoint.coordinateX);
     }
 }
