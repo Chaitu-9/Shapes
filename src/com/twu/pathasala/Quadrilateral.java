@@ -11,6 +11,10 @@ public class Quadrilateral {
     }
 
     public double area() {
+        if((firstPoint.coordinateX == secondPoint.coordinateX && secondPoint.coordinateX ==thirdPoint.coordinateX && thirdPoint.coordinateX == fourthPoint.coordinateX)
+                ||(firstPoint.coordinateY == secondPoint.coordinateY && secondPoint.coordinateY ==thirdPoint.coordinateY && thirdPoint.coordinateY == fourthPoint.coordinateY))
         return 0;
+        else
+            return Math.pow(firstPoint.distanceFrom(secondPoint),2);
     }
 }
