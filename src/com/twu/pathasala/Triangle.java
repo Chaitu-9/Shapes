@@ -9,10 +9,6 @@ public class Triangle {
     }
 
     public double area() {
-        if (firstPoint.coordinateX == secondPoint.coordinateX && secondPoint.coordinateX == thirdPoint.coordinateX
-                || firstPoint.coordinateX == secondPoint.coordinateX && secondPoint.coordinateX == thirdPoint.coordinateX)
-        return 0;
-        else
             return Math.abs(firstPoint.coordinateX * (secondPoint.coordinateY - thirdPoint.coordinateY) +
                     secondPoint.coordinateX*(thirdPoint.coordinateY-firstPoint.coordinateY)+
                     thirdPoint.coordinateX*(firstPoint.coordinateY - secondPoint.coordinateY))/2;
