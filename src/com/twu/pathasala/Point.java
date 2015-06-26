@@ -10,7 +10,9 @@ public class Point {
     public double distanceFrom(Point otherPoint) {
         if(coordinateY==0 && otherPoint.coordinateY ==0)
         return Math.abs(coordinateX - otherPoint.coordinateX);
-        else
+        else if(coordinateX==0 && otherPoint.coordinateX ==0)
             return Math.abs(coordinateY - otherPoint.coordinateY);
+        else
+            return Math.abs(coordinateX - otherPoint.coordinateX);
     }
 }

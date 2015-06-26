@@ -26,4 +26,16 @@ public class PointTest {
 
         assertThat(actualDistance, is(expectedDistance));
     }
+
+    @Test
+    public void shouldCalculateDistanceBetweenTwoPointsWhenYcoordinatesAreEqual(){
+        Point firstPoint = new Point(2,1);
+        Point secondPoint = new Point(5,1);
+
+        double actualDistance = firstPoint.distanceFrom(secondPoint);
+        double expectedDistance =3;
+
+        assertThat(actualDistance, is(expectedDistance));
+    }
+
 }
