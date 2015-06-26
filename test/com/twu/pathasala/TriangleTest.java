@@ -84,4 +84,17 @@ public class TriangleTest {
 
         assertThat(isoscelesCheckActual, is(isoscelesCheckExpected));
     }
+
+    @Test
+    public void shouldDetermineIfTriangleIsScalene() {
+        Point firstPoint = new Point(4, 3);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(2, 4);
+        Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
+
+        String scaleneCheckActual  = triangle.type();
+        String scaleneCheckExpected = "Scalene";
+
+        assertThat(scaleneCheckActual, is(scaleneCheckExpected));
+    }
 }

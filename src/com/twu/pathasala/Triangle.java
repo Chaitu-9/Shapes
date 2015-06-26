@@ -23,6 +23,6 @@ public class Triangle {
                 ||firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint))
             return "Isosceles";
         else
-            return null;
+            return "Scalene";
     }
 }
