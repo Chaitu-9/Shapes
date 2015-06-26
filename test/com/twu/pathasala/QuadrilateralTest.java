@@ -47,4 +47,18 @@ public class QuadrilateralTest {
 
         assertThat(actualArea, is(expectedArea));
     }
+
+    @Test
+    public void shouldCalculateAreaForAnyQuadrilateral(){
+        Point firstPoint = new Point(-2, 2);
+        Point secondPoint = new Point(-4, -2);
+        Point thirdPoint = new Point(2, -2);
+        Point fourthPoint = new Point(4, 2);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        double actualArea = quadrilateral.area();
+        double expectedArea =24;
+
+        assertThat(actualArea, is(expectedArea));
+    }
 }
