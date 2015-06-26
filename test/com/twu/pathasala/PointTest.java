@@ -1,5 +1,6 @@
 package com.twu.pathasala;
 
+import org.hamcrest.core.Is;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -60,5 +61,16 @@ public class PointTest {
         double expectedDistance =5;
 
         assertThat(actualDistance, is(expectedDistance));
+    }
+
+    @Test
+    public void shouldCalculateSlopeOfLineParalleltoXAxis() {
+        Point firstPoint = new Point(1, 0);
+        Point secondPoint = new Point(4, 0);
+
+        double actualSlope = firstPoint.slope(secondPoint);
+        double expectedSlope = 0;
+
+        assertThat(actualSlope, is(expectedSlope));
     }
 }

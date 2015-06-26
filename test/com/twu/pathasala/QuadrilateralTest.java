@@ -61,4 +61,5 @@ public class QuadrilateralTest {
 
         assertThat(actualArea, is(expectedArea));
     }
+
 }

@@ -10,4 +10,8 @@ public class Point {
     public double distanceFrom(Point otherPoint) {
             return Math.sqrt(Math.pow(coordinateX - otherPoint.coordinateX, 2)+ Math.pow(coordinateY-otherPoint.coordinateY, 2));
     }
+
+    public double slope(Point otherPoint) {
+        return 0;
+    }
 }
