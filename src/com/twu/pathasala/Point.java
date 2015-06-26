@@ -1,8 +1,8 @@
 package com.twu.pathasala;
 
 public class Point {
-    int coordinateX, coordinateY;
-    public Point(int coordinateX, int coordinateY) {
+    double coordinateX, coordinateY;
+    public Point(double coordinateX, double coordinateY) {
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
     }
