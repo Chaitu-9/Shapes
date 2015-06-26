@@ -1,4 +1,5 @@
-import com.twu.pathasala.Point;
+package com.twu.pathasala;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
