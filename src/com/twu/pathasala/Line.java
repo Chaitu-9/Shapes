@@ -8,7 +8,7 @@ public class Line {
         this.secondPoint =secondPoint;
     }
 
-    public double slope(Line otherLine) {
+    public double slope() {
         return 0;
     }
 }

@@ -13,7 +13,7 @@ public class LineTest {
         Line line = new Line(firstPoint, secondPoint);
         Line otherLine = new Line(firstPoint, secondPoint);
 
-        double actualSlope = line.slope(otherLine);
+        double actualSlope = line.slope();
         double expectedSlope = 0;
 
         assertThat(actualSlope, is(expectedSlope));
