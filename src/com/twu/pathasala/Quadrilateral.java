@@ -19,16 +19,30 @@ public class Quadrilateral {
 
 
     public String type() {
-            if(areFourSidesEqual()
-                    && (isPerpendicular(firstPoint, secondPoint, thirdPoint)
-                    && isPerpendicular(thirdPoint, fourthPoint, firstPoint))
-                    || (isPerpendicular(secondPoint, firstPoint, fourthPoint)
-                    && isPerpendicular(secondPoint,thirdPoint,fourthPoint)))
+            if(areFourSidesEqual() && areAllSidesPerpendicular())
                 return "Square";
             else if(areFourSidesEqual())
                 return "Rhombus";
+            else if(areOppositeSidesParallel() && areAllSidesPerpendicular())
+                return "Rectangle";
             else
                 return null;
+    }
+
+    private boolean areOppositeSidesParallel() {
+        return isParallel(firstPoint, secondPoint, thirdPoint, fourthPoint)
+                && isParallel(secondPoint, thirdPoint, fourthPoint, firstPoint);
+    }
+
+    private boolean areAllSidesPerpendicular() {
+        return isPerpendicular(firstPoint, secondPoint, thirdPoint)
+                && isPerpendicular(thirdPoint, fourthPoint, firstPoint)
+                && isPerpendicular(secondPoint, firstPoint, fourthPoint)
+                && isPerpendicular(secondPoint, thirdPoint, fourthPoint);
+    }
+
+    private boolean isParallel(Point firstPoint, Point secondPoint, Point thirdPoint, Point fourthPoint) {
+        return firstPoint.slope(secondPoint)==thirdPoint.slope(fourthPoint);
     }
 
     private boolean isPerpendicular(Point firstPoint, Point secondPoint, Point thirdPoint) {

@@ -90,4 +90,18 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralIsRectangle(){
+        Point firstPoint = new Point(0, 0);
+        Point secondPoint = new Point(4, 0);
+        Point thirdPoint = new Point(4, 2);
+        Point fourthPoint = new Point(0, 2);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Rectangle";
+
+        assertThat(actualShape, is(expectedShape));
+    }
+
 }
