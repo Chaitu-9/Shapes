@@ -62,4 +62,20 @@ public class QuadrilateralTest {
         assertThat(actualArea, is(expectedArea));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralIsSquare(){
+        Point firstPoint = new Point(0, 4);
+        Point secondPoint = new Point(4, 4);
+        Point thirdPoint = new Point(4, 0);
+        Point fourthPoint = new Point(0, 0);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Square";
+
+        assertThat(actualShape, is(expectedShape));
+    }
+
+
+
 }
