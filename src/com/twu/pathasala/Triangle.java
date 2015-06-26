@@ -22,6 +22,8 @@ public class Triangle {
             return "Isosceles";
         else if(firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint))
             return "Isosceles";
+        else if(firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint))
+            return "Isosceles";
         else
             return null;
     }
