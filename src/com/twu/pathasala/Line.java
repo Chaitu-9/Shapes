@@ -9,6 +9,9 @@ public class Line {
     }
 
     public double slope() {
+        if(firstPoint.coordinateY == secondPoint.coordinateY)
         return 0;
+        else
+            return Double.POSITIVE_INFINITY;
     }
 }
