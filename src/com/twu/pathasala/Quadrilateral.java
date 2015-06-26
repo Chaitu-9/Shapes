@@ -25,6 +25,8 @@ public class Quadrilateral {
                 return "Rhombus";
             else if(areOppositeSidesParallel() && areAllSidesPerpendicular())
                 return "Rectangle";
+            else if(areOppositeSidesParallel())
+                return "Parallelogram";
             else
                 return null;
     }

@@ -104,4 +104,18 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralIsParallelogram(){
+        Point firstPoint = new Point(0, 0);
+        Point secondPoint = new Point(4, 0);
+        Point thirdPoint = new Point(6, 4);
+        Point fourthPoint = new Point(2, 4);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Parallelogram";
+
+        assertThat(actualShape, is(expectedShape));
+    }
+
 }
