@@ -45,4 +45,17 @@ public class TriangleTest {
 
         assertThat(equilateralCheckActual, is(equilateralCheckExpected));
     }
+
+    @Test
+    public void shouldDetermineIfTriangleIsIsoscelesIfFirstAndSecondSidesAreEqual() {
+        Point firstPoint = new Point(2, 4);
+        Point secondPoint = new Point(4, 0);
+        Point thirdPoint = new Point(0, 0);
+        Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
+
+        String isoscelesCheckActual  = triangle.type();
+        String isoscelesCheckExpected = "Isosceles";
+
+        assertThat(isoscelesCheckActual, is(isoscelesCheckExpected));
+    }
 }
