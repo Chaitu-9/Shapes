@@ -76,6 +76,18 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralIsRhombus(){
+        Point firstPoint = new Point(0, 4);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(4, 4);
+        Point fourthPoint = new Point(2, 8);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
 
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Rhombus";
+
+        assertThat(actualShape, is(expectedShape));
+    }
 
 }

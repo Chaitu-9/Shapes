@@ -25,6 +25,8 @@ public class Quadrilateral {
                     || (isPerpendicular(secondPoint, firstPoint, fourthPoint)
                     && isPerpendicular(secondPoint,thirdPoint,fourthPoint)))
                 return "Square";
+            else if(areFourSidesEqual())
+                return "Rhombus";
             else
                 return null;
     }
