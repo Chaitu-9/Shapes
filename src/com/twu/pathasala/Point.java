@@ -12,7 +12,9 @@ public class Point {
         return Math.abs(coordinateX - otherPoint.coordinateX);
         else if(coordinateX==0 && otherPoint.coordinateX ==0)
             return Math.abs(coordinateY - otherPoint.coordinateY);
-        else
+        else if(coordinateY == otherPoint.coordinateY)
             return Math.abs(coordinateX - otherPoint.coordinateX);
+        else
+            return Math.abs(coordinateY - otherPoint.coordinateY);
     }
 }
