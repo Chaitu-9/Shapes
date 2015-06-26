@@ -20,6 +20,8 @@ public class Triangle {
         return "Equilateral";
         else if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint))
             return "Isosceles";
+        else if(firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint))
+            return "Isosceles";
         else
             return null;
     }
