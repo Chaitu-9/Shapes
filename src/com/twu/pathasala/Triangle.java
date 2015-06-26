@@ -18,11 +18,9 @@ public class Triangle {
         if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
                 &&firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint) )
         return "Equilateral";
-        else if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint))
-            return "Isosceles";
-        else if(firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint))
-            return "Isosceles";
-        else if(firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint))
+        else if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
+                ||firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint)
+                ||firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint))
             return "Isosceles";
         else
             return null;
