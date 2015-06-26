@@ -15,4 +15,15 @@ public class PointTest {
 
         assertThat(actualDistance, is(expectedDistance));
     }
+
+    @Test
+    public void shouldCalculateDistanceBetweenTwoPointsOnYAxis(){
+        Point firstPoint = new Point(0,1);
+        Point secondPoint = new Point(0,3);
+
+        double actualDistance = firstPoint.distanceFrom(secondPoint);
+        double expectedDistance =2;
+
+        assertThat(actualDistance, is(expectedDistance));
+    }
 }
