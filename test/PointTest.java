@@ -38,4 +38,15 @@ public class PointTest {
 
         assertThat(actualDistance, is(expectedDistance));
     }
+
+    @Test
+    public void shouldCalculateDistanceBetweenTwoPointsWhenOnePointLiesOnXAxisAndOtherOnYAxis(){
+        Point firstPoint = new Point(3,0);
+        Point secondPoint = new Point(0,4);
+
+        double actualDistance = firstPoint.distanceFrom(secondPoint);
+        double expectedDistance =5;
+
+        assertThat(actualDistance, is(expectedDistance));
+    }
 }
