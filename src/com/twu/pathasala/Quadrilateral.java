@@ -19,13 +19,13 @@ public class Quadrilateral {
 
 
     public String type() {
-            if(areFourSidesEqual() && areAllSidesPerpendicular())
+            if(areFourSidesEqual() && areAllSidesPerpendicular() && noThreePointsAreCollinear())
                 return "Square";
-            else if(areFourSidesEqual())
+            else if(areFourSidesEqual() && noThreePointsAreCollinear())
                 return "Rhombus";
-            else if(areOppositeSidesParallel() && areAllSidesPerpendicular())
+            else if(areOppositeSidesParallel() && areAllSidesPerpendicular() && noThreePointsAreCollinear())
                 return "Rectangle";
-            else if(areOppositeSidesParallel())
+            else if(areOppositeSidesParallel() && noThreePointsAreCollinear())
                 return "Parallelogram";
             else if(noThreePointsAreCollinear())
                 return "Trapezium";
