@@ -15,18 +15,14 @@ public class Triangle {
     }
 
     public String type() {
-        if(areAllSidesEqual() && arePointsCollinear(firstPoint, secondPoint, thirdPoint))
+        if(areAllSidesEqual() && firstPoint.arePointsNonCollinear(secondPoint, thirdPoint))
             return "Equilateral";
-        else if(areTwoSidesEqual()&& arePointsCollinear(firstPoint, secondPoint, thirdPoint))
+        else if(areTwoSidesEqual()&& firstPoint.arePointsNonCollinear(secondPoint, thirdPoint))
             return "Isosceles";
-        else if(arePointsCollinear(firstPoint, secondPoint, thirdPoint))
+        else if(firstPoint.arePointsNonCollinear(secondPoint, thirdPoint))
             return "Scalene";
         else
             return "Triangle cannot be formed";
-    }
-
-    private boolean arePointsCollinear(Point firstPoint, Point secondPoint, Point thirdPoint) {
-        return firstPoint.slope(secondPoint) != secondPoint.slope(thirdPoint);
     }
 
     private boolean areTwoSidesEqual() {
