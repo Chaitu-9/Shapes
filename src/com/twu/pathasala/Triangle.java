@@ -15,15 +15,23 @@ public class Triangle {
     }
 
     public String type() {
-        if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
-                &&firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint) )
-        return "Equilateral";
-        else if(firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
-                ||firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint)
-                ||firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint))
+        if(areAllSidesEqual())
+            return "Equilateral";
+        else if(areTwoSidesEqual())
             return "Isosceles";
         else
             return "Scalene";
+    }
+
+    private boolean areTwoSidesEqual() {
+        return firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
+                ||firstPoint.distanceFrom(secondPoint) == secondPoint.distanceFrom(thirdPoint)
+                ||firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint);
+    }
+
+    private boolean areAllSidesEqual() {
+        return firstPoint.distanceFrom(secondPoint) == firstPoint.distanceFrom(thirdPoint)
+                &&firstPoint.distanceFrom(thirdPoint) == secondPoint.distanceFrom(thirdPoint);
     }
 
     @Override
@@ -33,10 +41,7 @@ public class Triangle {
 
         Triangle triangle = (Triangle) o;
 
-        if(area() == triangle.area())
-            return true;
-        else
-            return false;
+        return area() == triangle.area();
     }
 
     @Override

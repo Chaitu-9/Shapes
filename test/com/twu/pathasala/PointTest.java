@@ -65,7 +65,7 @@ public class PointTest {
 
     @Test
     public void shouldCalculateSlopeOfLineParalleltoXAxis() {
-        Point firstPoint = new Point(1, 0);
+        Point firstPoint = new Point(10, 0);
         Point secondPoint = new Point(4, 0);
 
         double actualSlope = firstPoint.slope(secondPoint);

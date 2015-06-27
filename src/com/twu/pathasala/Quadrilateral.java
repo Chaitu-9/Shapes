@@ -33,6 +33,7 @@ public class Quadrilateral {
                 return "Quadrilateral cannot be formed with these points";
     }
 
+
     private boolean noThreePointsAreCollinear() {
         return  !(isParallel(firstPoint,secondPoint,secondPoint,thirdPoint)
                 || isParallel(secondPoint,thirdPoint,thirdPoint,fourthPoint)

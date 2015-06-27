@@ -1,5 +1,6 @@
 package com.twu.pathasala;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -145,5 +146,26 @@ public class QuadrilateralTest {
 
         assertThat(actualShape, is(expectedShape));
     }
+
+//    @Test
+//    public void shouldDetermineIfTwoQuadrilateralsAreEqualInArea() {
+//        Point firstPoint = new Point(4, 0);
+//        Point secondPoint = new Point(0, 0);
+//        Point thirdPoint = new Point(0, 4);
+//        Point fourthPoint = new Point(4, 4);
+//        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+//
+//
+//        Point otherfirstPoint = new Point(0, 0);
+//        Point othersecondPoint = new Point(8, 0);
+//        Point otherthirdPoint = new Point(0, 2);
+//        Point otherfourthPoint = new Point(8, 2);
+//        Quadrilateral otherQuadrilateral = new  Quadrilateral(otherfirstPoint, othersecondPoint, otherthirdPoint, otherfourthPoint);
+//
+//        Boolean checkActual  = quadrilateral.equals(otherQuadrilateral);
+//        Boolean checkExpected = true;
+//
+//        assertThat(checkActual, CoreMatchers.is(checkExpected));
+//    }
 
 }
