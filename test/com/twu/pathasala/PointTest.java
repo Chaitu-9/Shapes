@@ -1,6 +1,5 @@
 package com.twu.pathasala;
 
-import org.hamcrest.core.Is;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -95,4 +94,17 @@ public class PointTest {
 
         assertThat(actualSlope, is(expectedSlope));
     }
+
+    @Test
+    public void shouldDetermineIfPointsAreCollinear(){
+        Point firstPoint = new Point(3, 1);
+        Point secondPoint = new Point(6, 1);
+        Point thirdPoint = new Point(8, 1);
+
+        boolean isCollinearactual = firstPoint.arePointsNonCollinear(secondPoint, thirdPoint);
+        boolean isCollinearexpected = false;
+
+        assertThat(isCollinearactual, is(isCollinearexpected));
+    }
+
 }

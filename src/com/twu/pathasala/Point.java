@@ -14,7 +14,10 @@ public class Point {
     public double slope(Point otherPoint) {
         if (coordinateX == otherPoint.coordinateX)
             return Double.POSITIVE_INFINITY;
-        else
-            return (coordinateY -otherPoint.coordinateY)/(coordinateX- otherPoint.coordinateX);
+        return (coordinateY -otherPoint.coordinateY)/(coordinateX- otherPoint.coordinateX);
+    }
+
+    public boolean arePointsNonCollinear(Point otherPoint, Point anotherPoint) {
+        return slope(otherPoint) != otherPoint.slope(anotherPoint);
     }
 }

@@ -1,6 +1,5 @@
 package com.twu.pathasala;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
