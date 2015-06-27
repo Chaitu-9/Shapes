@@ -118,4 +118,18 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralIsTrapezium(){
+        Point firstPoint = new Point(0, 0);
+        Point secondPoint = new Point(2, 3);
+        Point thirdPoint = new Point(6, 1);
+        Point fourthPoint = new Point(1, 4);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Trapezium";
+
+        assertThat(actualShape, is(expectedShape));
+    }
+
 }

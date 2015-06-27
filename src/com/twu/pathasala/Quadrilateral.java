@@ -27,8 +27,17 @@ public class Quadrilateral {
                 return "Rectangle";
             else if(areOppositeSidesParallel())
                 return "Parallelogram";
-            else
+            else if(noThreePointsAreCollinear())
+                return "Trapezium";
+             else
                 return null;
+    }
+
+    private boolean noThreePointsAreCollinear() {
+        return  !(isParallel(firstPoint,secondPoint,secondPoint,thirdPoint)
+                || isParallel(secondPoint,thirdPoint,thirdPoint,fourthPoint)
+                || isParallel(thirdPoint,fourthPoint,fourthPoint,firstPoint)
+                || isParallel(fourthPoint,firstPoint,firstPoint,secondPoint));
     }
 
     private boolean areOppositeSidesParallel() {
