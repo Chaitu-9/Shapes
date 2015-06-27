@@ -99,6 +99,21 @@ public class TriangleTest {
     }
 
     @Test
+    public void shouldDetermineIfTriangleCanBeFormedOrNot() {
+        Point firstPoint = new Point(4, 0);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(5, 0);
+        Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
+
+        String scaleneCheckActual  = triangle.type();
+        String scaleneCheckExpected = "Triangle cannot be formed";
+
+        assertThat(scaleneCheckActual, is(scaleneCheckExpected));
+    }
+
+
+
+    @Test
     public void shouldDetermineIfTwoTrianglesAreEqualInArea() {
         Point firstPoint = new Point(0, 0);
         Point secondPoint = new Point(2, 0);
