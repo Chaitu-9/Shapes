@@ -132,4 +132,18 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+    @Test
+    public void shouldDetermineIfQuadrilateralCannotBeFormedWithThosePoints(){
+        Point firstPoint = new Point(0, 0);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(6, 0);
+        Point fourthPoint = new Point(1, 4);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        String actualShape = quadrilateral.type();
+        String expectedShape = "Quadrilateral cannot be formed with these points";
+
+        assertThat(actualShape, is(expectedShape));
+    }
+
 }

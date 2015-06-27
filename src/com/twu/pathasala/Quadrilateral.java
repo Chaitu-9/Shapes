@@ -30,7 +30,7 @@ public class Quadrilateral {
             else if(noThreePointsAreCollinear())
                 return "Trapezium";
              else
-                return null;
+                return "Quadrilateral cannot be formed with these points";
     }
 
     private boolean noThreePointsAreCollinear() {
