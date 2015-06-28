@@ -20,4 +20,10 @@ public class Point {
     public boolean arePointsNonCollinear(Point otherPoint, Point anotherPoint) {
         return slope(otherPoint) != otherPoint.slope(anotherPoint);
     }
+
+    public boolean arePointsNonCollinear(Point otherPoint, Point anotherPoint, Point someOtherPoint) {
+        return  slope(otherPoint) != otherPoint.slope(anotherPoint)
+                && otherPoint.slope(anotherPoint) != anotherPoint.slope(someOtherPoint)
+                && anotherPoint.slope(someOtherPoint) != slope(otherPoint);
+    }
 }

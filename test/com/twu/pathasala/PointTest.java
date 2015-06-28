@@ -96,12 +96,25 @@ public class PointTest {
     }
 
     @Test
-    public void shouldDetermineIfPointsAreCollinear(){
+    public void shouldDetermineIfPointsAreCollinearforThreePoints(){
         Point firstPoint = new Point(3, 1);
         Point secondPoint = new Point(6, 1);
         Point thirdPoint = new Point(8, 1);
 
         boolean isCollinearactual = firstPoint.arePointsNonCollinear(secondPoint, thirdPoint);
+        boolean isCollinearexpected = false;
+
+        assertThat(isCollinearactual, is(isCollinearexpected));
+    }
+
+    @Test
+    public void shouldDetermineIfPointsAreCollinearforFourPoints(){
+        Point firstPoint = new Point(3, 1);
+        Point secondPoint = new Point(6, 1);
+        Point thirdPoint = new Point(8, 1);
+        Point fourthPoint = new Point(12, 1);
+
+        boolean isCollinearactual = firstPoint.arePointsNonCollinear(secondPoint, thirdPoint, fourthPoint);
         boolean isCollinearexpected = false;
 
         assertThat(isCollinearactual, is(isCollinearexpected));
