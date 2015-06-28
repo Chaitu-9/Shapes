@@ -35,6 +35,7 @@ public class Quadrilateral {
                 return "Quadrilateral cannot be formed with these points";
     }
 
+
     private boolean areOppositeSidesParallel() {
         return isParallel(firstPoint, secondPoint, thirdPoint, fourthPoint)
                 && isParallel(secondPoint, thirdPoint, fourthPoint, firstPoint);
@@ -65,4 +66,5 @@ public class Quadrilateral {
                 && secondPoint.distanceFrom(thirdPoint) == thirdPoint.distanceFrom(fourthPoint)
                 && thirdPoint.distanceFrom(fourthPoint) == fourthPoint.distanceFrom(firstPoint);
     }
+
 }

@@ -1,9 +1,5 @@
 package com.twu.pathasala;
 
-import java.util.Comparator;
-
-import static java.util.Objects.compare;
-
 public class Triangle {
     Point firstPoint, secondPoint, thirdPoint;
     public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint) {
@@ -59,24 +55,11 @@ public class Triangle {
     }
 
     public Boolean isOverlapping(Triangle otherTriangle) {
-        if (firstPoint.compareTo(otherTriangle.firstPoint) && secondPoint.compareTo(otherTriangle.secondPoint)
-                && thirdPoint.compareTo(otherTriangle.thirdPoint))
+        if ((firstPoint.compareTo(otherTriangle.firstPoint)|| firstPoint.compareTo(otherTriangle.secondPoint) || firstPoint.compareTo(otherTriangle.thirdPoint))
+                && (secondPoint.compareTo(otherTriangle.firstPoint)|| secondPoint.compareTo(otherTriangle.secondPoint) || secondPoint.compareTo(otherTriangle.thirdPoint))
+                && (thirdPoint.compareTo(otherTriangle.firstPoint)|| thirdPoint.compareTo(otherTriangle.secondPoint) || thirdPoint.compareTo(otherTriangle.thirdPoint)))
             return true;
-        else if(firstPoint.compareTo(otherTriangle.firstPoint) && secondPoint.compareTo(otherTriangle.thirdPoint)
-                && thirdPoint.compareTo(otherTriangle.secondPoint))
-            return true;
-        else if (firstPoint.compareTo(otherTriangle.secondPoint) && secondPoint.compareTo(otherTriangle.firstPoint)
-                && thirdPoint.compareTo(otherTriangle.thirdPoint))
-            return true;
-        else if (firstPoint.compareTo(otherTriangle.thirdPoint) && secondPoint.compareTo(otherTriangle.secondPoint)
-                && thirdPoint.compareTo(otherTriangle.firstPoint))
-            return true;
-        else if (firstPoint.compareTo(otherTriangle.thirdPoint) && secondPoint.compareTo(otherTriangle.firstPoint)
-                && thirdPoint.compareTo(otherTriangle.secondPoint))
-            return true;
-        else if (firstPoint.compareTo(otherTriangle.secondPoint) && secondPoint.compareTo(otherTriangle.thirdPoint)
-                && thirdPoint.compareTo(otherTriangle.firstPoint))
-            return true;
-        else return false;
+        else
+            return false;
     }
 }
