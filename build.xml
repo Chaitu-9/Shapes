@@ -38,7 +38,7 @@
 
     <target name="jar" depends="test">
         <mkdir dir="out/jar"/>
-        <jar destfile="out/jar/L    ineLength.jar" basedir="out/src/classes">
+        <jar destfile="out/jar/LineLength.jar" basedir="out/src/classes">
             <manifest>
                 <attribute name="Main-Class" value="com.pathasala.Main"/>
             </manifest>

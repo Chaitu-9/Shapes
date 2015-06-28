@@ -19,26 +19,20 @@ public class Quadrilateral {
 
 
     public String type() {
-            if(areFourSidesEqual() && areAllSidesPerpendicular() && noThreePointsAreCollinear())
+        if(firstPoint.arePointsNonCollinear(secondPoint, thirdPoint, fourthPoint)) {
+            if (areFourSidesEqual() && areAllSidesPerpendicular())
                 return "Square";
-            else if(areFourSidesEqual() && noThreePointsAreCollinear())
+            else if (areFourSidesEqual())
                 return "Rhombus";
-            else if(areOppositeSidesParallel() && areAllSidesPerpendicular() && noThreePointsAreCollinear())
+            else if (areOppositeSidesParallel() && areAllSidesPerpendicular())
                 return "Rectangle";
-            else if(areOppositeSidesParallel() && noThreePointsAreCollinear())
+            else if (areOppositeSidesParallel())
                 return "Parallelogram";
-            else if(noThreePointsAreCollinear())
+            else
                 return "Trapezium";
+        }
              else
                 return "Quadrilateral cannot be formed with these points";
-    }
-
-
-    private boolean noThreePointsAreCollinear() {
-        return  !(isParallel(firstPoint,secondPoint,secondPoint,thirdPoint)
-                || isParallel(secondPoint,thirdPoint,thirdPoint,fourthPoint)
-                || isParallel(thirdPoint,fourthPoint,fourthPoint,firstPoint)
-                || isParallel(fourthPoint,firstPoint,firstPoint,secondPoint));
     }
 
     private boolean areOppositeSidesParallel() {
