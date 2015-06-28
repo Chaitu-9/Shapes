@@ -55,11 +55,8 @@ public class Triangle {
     }
 
     public Boolean isOverlapping(Triangle otherTriangle) {
-        if ((firstPoint.compareTo(otherTriangle.firstPoint, null, null)|| firstPoint.compareTo(otherTriangle.secondPoint, null, null) || firstPoint.compareTo(otherTriangle.thirdPoint, null, null))
-                && (secondPoint.compareTo(otherTriangle.firstPoint, null, null)|| secondPoint.compareTo(otherTriangle.secondPoint, null, null) || secondPoint.compareTo(otherTriangle.thirdPoint, null, null))
-                && (thirdPoint.compareTo(otherTriangle.firstPoint, null, null)|| thirdPoint.compareTo(otherTriangle.secondPoint, null, null) || thirdPoint.compareTo(otherTriangle.thirdPoint, null, null)))
-            return true;
-        else
-            return false;
+        return firstPoint.compareTo(otherTriangle.firstPoint, otherTriangle.secondPoint, otherTriangle.thirdPoint)
+                && secondPoint.compareTo(otherTriangle.firstPoint, otherTriangle.secondPoint, otherTriangle.thirdPoint)
+                && thirdPoint.compareTo(otherTriangle.firstPoint, otherTriangle.secondPoint, otherTriangle.thirdPoint);
     }
 }
