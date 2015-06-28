@@ -68,7 +68,7 @@ public class Quadrilateral {
     }
 
     public boolean isOverlapping(Quadrilateral otherQuadrilateral) {
-        if(firstPoint.compareTo(otherQuadrilateral.firstPoint) && secondPoint.compareTo(otherQuadrilateral.secondPoint) && thirdPoint.compareTo(otherQuadrilateral.thirdPoint) && fourthPoint.compareTo(otherQuadrilateral.fourthPoint))
+        if(firstPoint.compareTo(otherQuadrilateral.firstPoint, null, null) && secondPoint.compareTo(otherQuadrilateral.secondPoint, null, null) && thirdPoint.compareTo(otherQuadrilateral.thirdPoint, null, null) && fourthPoint.compareTo(otherQuadrilateral.fourthPoint, null, null))
         return true;
         else
             return false;

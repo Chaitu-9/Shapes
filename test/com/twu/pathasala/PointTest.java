@@ -121,11 +121,13 @@ public class PointTest {
     }
 
     @Test
-    public void shouldCheckIfAPointIsSameAsOtherPoint(){
-        Point firstPoint = new Point(3, 1);
-        Point secondPoint = new Point(3, 1);
+    public void shouldCheckIfAPointIsSameAsFirstPointInArguments(){
+        Point firstPoint = new Point(3, 4);
+        Point secondPoint = new Point(3, 4);
+        Point thirdPoint = new Point(2, 6);
+        Point fourthPoint = new Point(3, 5);
 
-        boolean actualequity = firstPoint.compareTo(secondPoint);
+        boolean actualequity = firstPoint.compareTo(secondPoint, thirdPoint, fourthPoint);
         boolean expectedequity = true;
 
         assertThat(actualequity, is(expectedequity));

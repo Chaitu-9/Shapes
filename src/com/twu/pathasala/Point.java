@@ -27,7 +27,8 @@ public class Point {
                 && anotherPoint.slope(someOtherPoint) != someOtherPoint.slope(this);
     }
 
-    public Boolean compareTo(Point otherPoint) {
-        return coordinateX == otherPoint.coordinateX && coordinateY == otherPoint.coordinateY;
+    public Boolean compareTo(Point otherPoint, Point anotherPoint, Point someOtherPoint) {
+        return (coordinateX == otherPoint.coordinateX && coordinateY == otherPoint.coordinateY)
+                || (coordinateX == anotherPoint.coordinateX && coordinateY == anotherPoint.coordinateY);
     }
 }
