@@ -146,4 +146,17 @@ public class PointTest {
         assertThat(actualequity, is(expectedequity));
     }
 
+    @Test
+    public void shouldCheckIfAPointIsSameAsThirdPointInArguments(){
+        Point firstPoint = new Point(3, 4);
+        Point secondPoint = new Point(2, 6);
+        Point thirdPoint = new Point(3, 5);
+        Point fourthPoint = new Point(3, 4);
+
+        boolean actualequity = firstPoint.compareTo(secondPoint, thirdPoint, fourthPoint);
+        boolean expectedequity = true;
+
+        assertThat(actualequity, is(expectedequity));
+    }
+
 }
