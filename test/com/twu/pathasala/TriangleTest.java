@@ -188,4 +188,23 @@ public class TriangleTest {
 
         assertThat(checkActual, is(checkExpected));
     }
+
+    @Test
+    public void shouldDetermineIfTwoTrianglesAreOverlappingIfFirstAndSecondPointsAreInterChanged() {
+        Point firstPoint = new Point(4, 3);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(2, 4);
+        Triangle triangle = new Triangle(firstPoint, secondPoint, thirdPoint);
+
+
+        Point otherfirstPoint = new Point(2, 0);
+        Point othersecondPoint = new Point(4, 3);
+        Point otherthirdPoint = new Point(2, 4);
+        Triangle otherTriangle = new Triangle(otherfirstPoint, othersecondPoint, otherthirdPoint);
+
+        Boolean checkActual  = triangle.isOverlapping(otherTriangle);
+        Boolean checkExpected = true;
+
+        assertThat(checkActual, is(checkExpected));
+    }
 }
