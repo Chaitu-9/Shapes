@@ -1,5 +1,9 @@
 package com.twu.pathasala;
 
+import java.util.Comparator;
+
+import static java.util.Objects.compare;
+
 public class Triangle {
     Point firstPoint, secondPoint, thirdPoint;
     public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint) {
@@ -48,9 +52,9 @@ public class Triangle {
 
     @Override
     public int hashCode() {
-        int result = firstPoint.hashCode();
+        int result =firstPoint.hashCode();
         result = 31 * result + secondPoint.hashCode();
-        result = 31 * result + thirdPoint.hashCode();
+        result = 31* result + thirdPoint.hashCode();
         return result;
     }
 }

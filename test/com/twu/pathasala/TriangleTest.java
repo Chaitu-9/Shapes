@@ -150,4 +150,6 @@ public class TriangleTest {
 
         assertThat(checkActual, is(checkExpected));
     }
+
+
 }

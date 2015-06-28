@@ -120,4 +120,15 @@ public class PointTest {
         assertThat(isCollinearactual, is(isCollinearexpected));
     }
 
+    @Test
+    public void shouldCheckIfAPointIsSameAsOtherPoint(){
+        Point firstPoint = new Point(3, 1);
+        Point secondPoint = new Point(3, 1);
+
+        boolean actualequity = firstPoint.compareTo(secondPoint);
+        boolean expectedequity = true;
+
+        assertThat(actualequity, is(expectedequity));
+    }
+
 }

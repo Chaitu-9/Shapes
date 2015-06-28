@@ -146,6 +146,7 @@ public class QuadrilateralTest {
         assertThat(actualShape, is(expectedShape));
     }
 
+
 //    @Test
 //    public void shouldDetermineIfTwoQuadrilateralsAreEqualInArea() {
 //        Point firstPoint = new Point(4, 0);
@@ -161,10 +162,10 @@ public class QuadrilateralTest {
 //        Point otherfourthPoint = new Point(8, 2);
 //        Quadrilateral otherQuadrilateral = new  Quadrilateral(otherfirstPoint, othersecondPoint, otherthirdPoint, otherfourthPoint);
 //
-//        Boolean checkActual  = quadrilateral.equals(otherQuadrilateral);
+//        Boolean checkActual  = otherQuadrilateral.equals(quadrilateral);
 //        Boolean checkExpected = true;
 //
-//        assertThat(checkActual, CoreMatchers.is(checkExpected));
+//        assertThat(checkActual, is(checkExpected));
 //    }
 
 }
