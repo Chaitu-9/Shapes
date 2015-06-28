@@ -35,6 +35,7 @@ public class Point {
 
     public Boolean compareTo(Point otherPoint, Point anotherPoint, Point someOtherPoint, Point lastPoint) {
         return (coordinateX == otherPoint.coordinateX && coordinateY == otherPoint.coordinateY)
-                || (coordinateX == anotherPoint.coordinateX && coordinateY == anotherPoint.coordinateY);
+                || (coordinateX == anotherPoint.coordinateX && coordinateY == anotherPoint.coordinateY)
+                || (coordinateX == someOtherPoint.coordinateX && coordinateY == someOtherPoint.coordinateY);
     }
 }
