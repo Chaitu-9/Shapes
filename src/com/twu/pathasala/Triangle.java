@@ -57,4 +57,9 @@ public class Triangle {
         result = 31* result + thirdPoint.hashCode();
         return result;
     }
+
+    public Boolean isOverlapping(Triangle otherTriangle) {
+        return firstPoint.compareTo(otherTriangle.firstPoint) && secondPoint.compareTo(otherTriangle.secondPoint)
+                && thirdPoint.compareTo(otherTriangle.thirdPoint);
+    }
 }
