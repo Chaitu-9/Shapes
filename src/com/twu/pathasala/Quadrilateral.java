@@ -67,4 +67,10 @@ public class Quadrilateral {
                 && thirdPoint.distanceFrom(fourthPoint) == fourthPoint.distanceFrom(firstPoint);
     }
 
+    public boolean isOverlapping(Quadrilateral otherQuadrilateral) {
+        if(firstPoint.compareTo(otherQuadrilateral.firstPoint) && secondPoint.compareTo(otherQuadrilateral.secondPoint) && thirdPoint.compareTo(otherQuadrilateral.thirdPoint) && fourthPoint.compareTo(otherQuadrilateral.fourthPoint))
+        return true;
+        else
+            return false;
+    }
 }
