@@ -68,6 +68,9 @@ public class Triangle {
         else if (firstPoint.compareTo(otherTriangle.secondPoint) && secondPoint.compareTo(otherTriangle.firstPoint)
                 && thirdPoint.compareTo(otherTriangle.thirdPoint))
             return true;
+        else if (firstPoint.compareTo(otherTriangle.thirdPoint) && secondPoint.compareTo(otherTriangle.secondPoint)
+                && thirdPoint.compareTo(otherTriangle.firstPoint))
+            return true;
         else return false;
     }
 }
