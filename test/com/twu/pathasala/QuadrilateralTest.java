@@ -186,6 +186,26 @@ public class QuadrilateralTest {
         assertThat(isSameactual, is(isSameexpected));
     }
 
+    @Test
+    public void shouldDetermineIfTwoQuadrilateralsAreNonOverlappingIfPointsAreNotSame(){
+        Point firstPoint = new Point(0, 0);
+        Point secondPoint = new Point(2, 0);
+        Point thirdPoint = new Point(6, 5);
+        Point fourthPoint = new Point(1, 4);
+        Quadrilateral quadrilateral = new  Quadrilateral(firstPoint, secondPoint, thirdPoint, fourthPoint);
+
+        Point otherfirstPoint = new Point(2, 1);
+        Point othersecondPoint = new Point(1, 4);
+        Point otherthirdPoint = new Point(0, 0);
+        Point otherfourthPoint = new Point(6, 5);
+        Quadrilateral otherQuadrilateral = new  Quadrilateral(otherfirstPoint, othersecondPoint, otherthirdPoint, otherfourthPoint);
+
+        boolean isSameactual = quadrilateral.isOverlapping(otherQuadrilateral);
+        boolean isSameexpected = false;
+
+        assertThat(isSameactual, is(isSameexpected));
+    }
+
 //    @Test
 //    public void shouldDetermineIfTwoQuadrilateralsAreEqualInArea() {
 //        Point firstPoint = new Point(4, 0);
