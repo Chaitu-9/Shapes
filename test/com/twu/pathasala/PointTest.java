@@ -2,7 +2,10 @@ package com.twu.pathasala;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class PointTest {
@@ -228,4 +231,61 @@ public class PointTest {
         assertThat(actualequity, is(expectedequity));
     }
 
+    @Test
+    public void testForReflexivity() {
+        Point firstPoint = new Point(1, 2);
+
+        assertEquals(firstPoint, firstPoint);
+    }
+
+    @Test
+    public void testForComparingNullObjectsWithAPoint() {
+        Point firstPoint = new Point(1, 2);
+
+        assertThat(firstPoint, not(equalTo(null)));
+    }
+
+    @Test
+    public void testForEquality() {
+        Point firstPoint = new Point(1, 2);
+        Point secondPoint = new Point(1, 2);
+
+        assertEquals(firstPoint, secondPoint);
+    }
+
+    @Test
+    public void testForDifferentObjects() {
+        Point firstPoint = new Point(1, 2);
+        Object one = new Integer(1);
+
+        assertThat(firstPoint, not(equalTo(one)));
+    }
+
+    @Test
+    public void testForTransitivity() {
+        Point firstPoint = new Point(1, 2);
+        Point secondPoint = new Point(1, 2);
+        Point thirdPoint = new Point(1, 2);
+
+        assertEquals(firstPoint, secondPoint);
+        assertEquals(secondPoint, firstPoint);
+        assertEquals(firstPoint, thirdPoint);
+    }
+
+    @Test
+    public void testForSymmetry() {
+        Point firstPoint = new Point(1, 2);
+        Point secondPoint = new Point(1, 2);
+
+        assertEquals(firstPoint, secondPoint);
+        assertEquals(secondPoint, firstPoint);
+    }
+
+    @Test
+    public void equalityTestForHashCode() {
+        Point firstPoint = new Point(1, 2);
+        Point secondPoint = new Point(1, 2);
+
+        assertEquals(firstPoint.hashCode(), secondPoint.hashCode());
+    }
 }

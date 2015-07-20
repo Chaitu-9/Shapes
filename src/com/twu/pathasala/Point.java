@@ -27,6 +27,29 @@ public class Point {
                 && anotherPoint.slope(someOtherPoint) != someOtherPoint.slope(this);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Point point = (Point) o;
+
+        if (Double.compare(point.coordinateX, coordinateX) != 0) return false;
+        return Double.compare(point.coordinateY, coordinateY) == 0;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(coordinateX);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(coordinateY);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+
     public Boolean compareTo(Point otherPoint, Point anotherPoint, Point someOtherPoint) {
         return (coordinateX == otherPoint.coordinateX && coordinateY == otherPoint.coordinateY)
                 || (coordinateX == anotherPoint.coordinateX && coordinateY == anotherPoint.coordinateY)
